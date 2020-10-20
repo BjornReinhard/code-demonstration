@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './App.module.css';
+import {motion} from "framer-motion";
 
 import {
     BrowserRouter as Router,
@@ -11,10 +12,18 @@ import Projects from "./layout/Projects/Projects";
 
 function App() {
     return (
-        <div className={styles.main} role="main">
-            Code demonstration project
+        <motion.div initial={{
+            opacity: 0,
+            y: 30
+        }} animate={{ opacity: 1, y: 0 }} transition={{ type: 'spring', ease: "easeOut", duration: 1, delay: 0.35, bounce: 0.25 }}
+            className={styles.main} role="main">
+            <motion.span initial={{
+                opacity: 0
+            }} animate={{opacity: 1}} transition={{type: 'spring', ease: "easeOut", duration: 1, delay: 1}}>
+                Code demonstration project
+            </motion.span>
 
-            <Router>
+            {/*<Router>
                 <div>
                     <ul>
                         <li>
@@ -25,18 +34,18 @@ function App() {
                         </li>
                     </ul>
 
-                    <hr />
+                    <hr/>
                     <Switch>
                         <Route exact path="/">
                             <div>Nothing</div>
                         </Route>
                         <Route path="/projects">
-                            <Projects />
+                            <Projects/>
                         </Route>
                     </Switch>
                 </div>
-            </Router>
-        </div>
+            </Router>*/}
+        </motion.div>
     );
 }
 
