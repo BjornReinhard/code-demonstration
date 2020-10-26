@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    height: 800px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid #e1e1e1;
+    color: #2c2c2c;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+
