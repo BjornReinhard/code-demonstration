@@ -1,8 +1,8 @@
-import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import {HomePage, Projects} from "../../../layout";
+import React, { FunctionComponent } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HomePage, Projects } from "../../../layout";
 
-export function AppRouting() {
+export const AppRouting: FunctionComponent<any> = () => {
     return <Router>
         <Switch>
             <Route exact path="/">

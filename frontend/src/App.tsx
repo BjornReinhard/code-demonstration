@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import './App.module.css';
 
 import {AppRouting} from "./common/components";
 
-function App() {
+const App: FunctionComponent<any> = () => {
     return <AppRouting/>;
-}
+};
 
 export default App;

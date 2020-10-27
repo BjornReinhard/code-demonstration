@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styles from "./MainNavigation.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export function MainNavigation() {
+export const MainNavigation: FunctionComponent<any> = () => {
     return <ul className={styles.mainNavList}>
         <li>
             <Link className={styles.navLink} to="/projects">Github</Link>

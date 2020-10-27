@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styles from './PageHeader.module.css';
-import {MainNavigation} from "..";
+import { MainNavigation } from "..";
 
-export function PageHeader() {
+export const PageHeader: FunctionComponent<any> = () => {
     return <div className={styles.pageHeader}>
         <MainNavigation/>
     </div>;
