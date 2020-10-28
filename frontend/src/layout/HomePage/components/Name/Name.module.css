@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font: 600 18px 'Source Sans Pro', sans-serif;
+    padding-bottom: 0.3rem;
+}
+
+.title {
+    font: 300 18px 'Source Sans Pro', sans-serif;
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+    .container {
+        padding-bottom: 4rem;
+    }
+}

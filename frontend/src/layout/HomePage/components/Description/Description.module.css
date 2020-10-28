@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font: 300 24px 'Source Sans Pro', sans-serif;
+    padding-bottom: 6rem;
+    line-height: 2.5rem;
+}

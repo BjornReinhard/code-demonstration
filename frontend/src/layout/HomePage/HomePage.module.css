@@ -1,14 +1,28 @@
+@value colors: "../../common/colors.module.css";
+@value borderColor from colors;
+
 .main {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    opacity: 0;
     max-width: 1280px;
-    height: 800px;
     background-color: #fff;
     border-radius: 3px;
-    border: 1px solid #e1e1e1;
+    border: 1px solid borderColor;
     color: #2c2c2c;
     box-sizing: border-box;
     font-size: 1.6rem;
+    padding: 5rem;
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+    .main {
+        padding: 2rem;
+    }
 }
 
 
