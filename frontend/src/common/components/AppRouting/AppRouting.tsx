@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { HomePage, Projects } from "../../../layout";
+import { AviaSales, HomePage, Projects } from "../../../layout";
 
 export const AppRouting: FunctionComponent<any> = () => {
     return <Router>
@@ -10,6 +10,9 @@ export const AppRouting: FunctionComponent<any> = () => {
             </Route>
             <Route path="/projects">
                 <Projects/>
+            </Route>
+            <Route path="/aviasales">
+                <AviaSales/>
             </Route>
         </Switch>
     </Router>

@@ -13,12 +13,14 @@ const mainTransition = {
 } as TransitionDefinition;
 
 export const HomePage: FunctionComponent<any> = () => {
-    return <motion.main initial={{opacity: 0, y: 30}} animate={{opacity: 1, y: 0}} transition={mainTransition}
-                        className={styles.main} role="main">
-        <PageHeader/>
-        <MainNavigation/>
-        <Description/>
-        <ResumeContainer/>
-        <LinksContainer/>
-    </motion.main>
+    return <div className={styles.container}>
+        <motion.main initial={{opacity: 0, y: 30}} animate={{opacity: 1, y: 0}} transition={mainTransition}
+                     className={styles.main} role="main">
+            <PageHeader/>
+            <MainNavigation/>
+            <Description/>
+            <ResumeContainer/>
+            <LinksContainer/>
+        </motion.main>
+    </div>
 }

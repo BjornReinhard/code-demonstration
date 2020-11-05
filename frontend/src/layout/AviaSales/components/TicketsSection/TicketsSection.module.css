@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noFilter {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 1.25rem;
+    font: 300 1rem 'Source Sans Pro', sans-serif;
+    margin-bottom: 1.25rem;
+}

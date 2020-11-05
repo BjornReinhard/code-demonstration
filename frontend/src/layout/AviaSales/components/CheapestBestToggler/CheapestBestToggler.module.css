@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin: 0 0 1.25rem 0;
+    font: 600 0.75rem/1.25rem 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.03125rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cheapest, .fastest {
+    width: 50%;
+    background-color: #fff;
+    color: #4A4A4A;
+    padding: 0.9375rem 3.5625rem;
+    border: 1px solid #DFE5EC;
+}
+
+.active {
+    background-color: #2196F3;
+    color: #fff;
+    border-color: #2196F3;
+}
+
+.cheapest {
+    border-top-left-radius: 0.3125rem;
+    border-bottom-left-radius: 0.3125rem;
+}
+
+.fastest {
+    border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+}
+

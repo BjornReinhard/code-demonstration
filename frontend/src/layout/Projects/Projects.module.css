@@ -1,0 +1,30 @@
+@value colors: "../../common/colors.module.css";
+@value borderColor from colors;
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.backButton {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #fff;
+    border: 1px solid borderColor;
+}
+
+.projectList {
+    display: flex;
+    list-style: none;
+}
+
+.projectListItem {
+    display: flex;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #fff;
+    border: 1px solid borderColor;
+}

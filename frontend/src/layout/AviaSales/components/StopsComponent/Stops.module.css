@@ -1,0 +1,12 @@
+.container {
+    padding: 1.25rem;
+}
+
+.stopsHeader {
+    margin: 0;
+    color: #4A4A4A;
+    font: 600 0.75rem 'Source Sans Pro';
+    letter-spacing: 0.03125rem;
+    padding-bottom: 1.25rem;
+    text-transform: uppercase;
+}

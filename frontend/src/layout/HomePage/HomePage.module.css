@@ -1,9 +1,17 @@
 @value colors: "../../common/colors.module.css";
 @value borderColor from colors;
 
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .main {
     display: flex;
     flex-direction: column;
+    height: 100%;
     width: 100%;
     opacity: 0;
     max-width: 1280px;
@@ -22,6 +30,24 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) {
     .main {
         padding: 2rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        padding: 4rem 4rem 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        padding: 8rem 8rem 0;
+    }
+}
+
+@media (min-width: 1300px) {
+    .container {
+        padding-bottom: 1rem
     }
 }
 
