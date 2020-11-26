@@ -5,6 +5,7 @@ import logo from "./Logo.svg";
 import styles from './AviaSales.module.css';
 import commonStyles from '../../common/common.module.css';
 import { Container, StopsComponent, TicketsSection } from "./components";
+import cx from "classnames";
 
 export const AviaSales: FunctionComponent<any> = () => {
     const [stops, setStops] = useState<number[]>([0,1,2]);
@@ -17,7 +18,7 @@ export const AviaSales: FunctionComponent<any> = () => {
             </Row>
             <Row center="xs">
                 <Col xs={12} md={3}>
-                    <Container className={commonStyles.containerBottomMargin}>
+                    <Container className={cx(commonStyles.containerBottomMargin, styles.stopsContainer)}>
                         <StopsComponent setStops={setStops}/>
                     </Container>
                 </Col>
