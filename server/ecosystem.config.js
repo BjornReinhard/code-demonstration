@@ -10,10 +10,6 @@ module.exports = {
         env: {
             NODE_ENV: 'development'
         },
-        node_args: '--max_old_space_size=8192',
-        env_production: {
-            NODE_ENV: 'production',
-            PORT: 80
-        }
+        node_args: '--max_old_space_size=8192'
     }],
 };

@@ -12,8 +12,8 @@
   "private": false,
   "scripts": {
     "prestart": "tsc && yarn --cwd ../frontend build && ncp ../frontend/build build",
-    "start": "cross-env HTTPS=true PORT=443 pm2 start ecosystem.config.js --no-daemon --env production",
-    "dev": "yarn run prestart && cross-env pm2 start ecosystem.config.js --no-daemon --env production",
+    "start": "cross-env HTTPS=true PORT=443 pm2 start ecosystem.config.js --no-daemon",
+    "dev": "yarn run prestart && cross-env PORT=80 pm2 start ecosystem.config.js --no-daemon",
     "tsc": "tsc"
   },
   "dependencies": {

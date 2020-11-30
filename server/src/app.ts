@@ -22,6 +22,7 @@ app.use((error, req, res, next) => {
 });
 
 if (process.env.HTTPS) {
+    console.log("Running https server...");
     const fs = require("fs");
     const https = require("https");
 
