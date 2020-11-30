@@ -25,8 +25,8 @@ if (process.env.HTTPS) {
     const fs = require("fs");
     const https = require("https");
 
-    const cert = fs.readFileSync('../certs/dstepanov_com.crt');
-    const ca = fs.readFileSync('../certs/dstepanov_com.ca-bundle');
+    const cert = fs.readFileSync('./certs/dstepanov_com.crt');
+    const ca = fs.readFileSync('./certs/dstepanov_com.ca-bundle');
     const key = fs.readFileSync('./certs/dstepanov.key');
 
 
