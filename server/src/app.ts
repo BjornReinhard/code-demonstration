@@ -11,16 +11,6 @@ app.use(cors());
 app.use(bodyParser.json({limit: '1024mb'}));
 app.use(bodyParser.urlencoded({limit: '1024mb', extended: true, parameterLimit: 500000}));
 
-app.get('*', function (request, response) {
-    response.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-});
-
-app.use((error, req, res, next) => {
-    console.error('=== Caught error ===');
-    console.error(error.stack);
-    next();
-});
-
 if (process.env.HTTPS) {
     console.log("Running https server...");
     const fs = require("fs");
@@ -42,6 +32,7 @@ if (process.env.HTTPS) {
     });
 
     const http = require("http");
+    const defaultPort = 80;
     const httpServer = http.createServer(app);
 
     app.use((req, res, next) => {
@@ -51,9 +42,19 @@ if (process.env.HTTPS) {
         next();
     });
 
-    httpServer.listen(80, () => console.log(`Code demonstration app listening on port ${port}!`));
+    httpServer.listen(defaultPort, () => console.log(`Code demonstration app listening on port ${defaultPort}!`));
 } else {
     app.listen(port, () => console.log(`Code demonstration app listening on port ${port}!`));
 }
+
+app.get('*', function (request, response) {
+    response.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
+
+app.use((error, req, res, next) => {
+    console.error('=== Caught error ===');
+    console.error(error.stack);
+    next();
+});
 
 export default app;
